@@ -5,7 +5,11 @@ import seminars.first.Calculator.Calculator;
 import static org.assertj.core.api.Assertions.*;
 
 public class CalculatorTest {
+
     public static void main(String[] args) {
+        // HomeWork 1
+        System.out.println(Calculator.calculatingDiscount(80, 10));
+
         // Проверка базового функционала с целыми числами:
         if (8 != Calculator.calculation(2, 6, '+')) {
             throw new AssertionError("Ошибка в методе");
@@ -39,6 +43,9 @@ public class CalculatorTest {
         assert 14 == Calculator.calculation(2, 7, '*');
         assert 2 == Calculator.calculation(100, 50, '/');
 
+
+
+
         // Проверка базового функционала с целыми числами, с использованием утверждений AssertJ:
 //        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
 //        assertThat(Calculator.calculation(2, 2, '-')).isEqualTo(0);
@@ -50,8 +57,8 @@ public class CalculatorTest {
 //                Calculator.calculation(8, 4, '_')
 //        ).isInstanceOf(IllegalStateException.class);
 
-        System.out.println(Calculator.calculation(2_147_483_647, 1, '+')); // integer overflow
-        System.out.println(Calculator.squareRootExtraction(169));
+        //System.out.println(Calculator.calculation(2_147_483_647, 1, '+')); // integer overflow
+        //System.out.println(Calculator.squareRootExtraction(169));
 
         // Примерные решения домашних заданий из 1 лекции:
 

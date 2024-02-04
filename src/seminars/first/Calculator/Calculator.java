@@ -1,5 +1,7 @@
 package seminars.first.Calculator;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class Calculator {
     public static int calculation(int firstOperand, int secondOperand, char operator) {
         int result;
@@ -45,6 +47,9 @@ public class Calculator {
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
         // purchaseAmount - сумма покупки
         // discountAmount - размер скидки
-        return 0; // Метод должен возвращать сумму покупки со скидкой
+        assertThat(discountAmount).isNotNull();
+        assertThat(discountAmount).isBetween(1,99);
+
+        return  (1-(double) discountAmount / 100) * purchaseAmount;// Метод должен возвращать сумму покупки со скидкой
     }
 }
