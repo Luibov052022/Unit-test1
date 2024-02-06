@@ -1,10 +1,9 @@
 package seminars.first.Shop;
 
 public class Product {
-    private Integer cost; // Стоимость продукта
+    private int cost; // Стоимость продукта
     private String title; // Название
 
-    // Геттеры, сеттеры:
     public int getCost() {
         return cost;
     }
@@ -19,5 +18,13 @@ public class Product {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Product(
+            String title,
+            int cost ) {
+        this.title = title;
+        this.cost = cost;
+
     }
 }
